@@ -1,5 +1,6 @@
 import {controller, target} from '@github/catalyst'
-import Litepicker from 'litepicker';
+// @ts-ignore
+import Litepicker from 'litepicker/dist/nocss/litepicker.umd.js';
 
 @controller
 class OfferDatepickerElement extends HTMLElement {

@@ -7,10 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const catalyst_1 = require("@github/catalyst");
-const litepicker_1 = require("litepicker");
+// @ts-ignore
+const litepicker_umd_js_1 = require("litepicker/dist/nocss/litepicker.umd.js");
 let OfferDatepickerElement = class OfferDatepickerElement extends HTMLElement {
     connectedCallback() {
-        this.picker = new litepicker_1.default({
+        this.picker = new litepicker_umd_js_1.default({
             element: this.begin,
             elementEnd: this.end,
             inlineMode: true,
