@@ -2,6 +2,8 @@ import {controller, target} from '@github/catalyst'
 // @ts-ignore
 import Litepicker from 'litepicker/dist/nocss/litepicker.umd.js';
 
+require('./litepicker.css')
+
 @controller
 class OfferDatepickerElement extends HTMLElement {
     picker: Litepicker;
