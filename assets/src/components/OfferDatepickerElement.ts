@@ -1,4 +1,4 @@
-import {controller, target} from '@github/catalyst'
+import {controller, target, attr} from '@github/catalyst'
 // @ts-ignore
 import Litepicker from 'litepicker/dist/nocss/litepicker.umd.js';
 
@@ -11,10 +11,15 @@ class OfferDatepickerElement extends HTMLElement { // eslint-disable-line no-unu
     @target begin: HTMLInputElement
     @target end: HTMLInputElement
 
+    @attr minDate: string = ''
+    @attr maxDate: string = ''
+
     connectedCallback() {
         this.picker = new Litepicker({
             element: this.begin,
             elementEnd: this.end,
+            minDate: '' !== this.minDate ? this.minDate : null,
+            maxDate: '' !== this.maxDate ? this.maxDate : null,
             inlineMode: true,
             format: 'DD.MM.YYYY',
             autoRefresh: true,
