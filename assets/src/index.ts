@@ -1,1 +1,1 @@
-import './components/OfferDatepickerElement'
+import './components/OfferDatepickerElement';

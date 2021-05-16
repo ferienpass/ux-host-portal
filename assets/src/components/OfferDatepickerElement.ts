@@ -5,7 +5,7 @@ import Litepicker from 'litepicker/dist/nocss/litepicker.umd.js';
 require('./litepicker.css')
 
 @controller
-class OfferDatepickerElement extends HTMLElement {
+class OfferDatepickerElement extends HTMLElement { // eslint-disable-line no-unused-vars
     picker: Litepicker;
 
     @target begin: HTMLInputElement
