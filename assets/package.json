@@ -4,8 +4,9 @@
     "license": "proprietary",
     "version": "1.0.0",
     "scripts": {
-        "check-types": "tsc --noEmit",
-        "build": "yarn check-types && babel src -d dist --extensions \".ts,.tsx\" --copy-files",
+        "build:js": "tsc",
+        "copy-files": "find ./src/components/ -type f -name '*.css' -exec cp '{}' ./dist/components/ ';'",
+        "build": "yarn build:js && yarn copy-files",
         "lint": "eslint src --ext .ts"
     },
     "main": "dist/index.js",
@@ -20,12 +21,6 @@
     },
     "devDependencies": {
         "@types/node": "12",
-        "typescript": "^4.2.4",
-        "@babel/cli": "^7.12.1",
-        "@babel/core": "^7.12.3",
-        "@babel/plugin-proposal-class-properties": "^7.13.0",
-        "@babel/plugin-proposal-decorators": "^7.14.2",
-        "@babel/preset-env": "^7.14.2",
-        "@babel/preset-typescript": "^7.13.0"
+        "typescript": "^4.2.4"
     }
 }
